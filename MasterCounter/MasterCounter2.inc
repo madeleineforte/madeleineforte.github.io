@@ -1,0 +1,1 @@
+[hideif [IPAddress]~207.067.226][replace db=/MasterCounter/stmcounters.db&eqURLdata=[ThisURL]&append=T]URL=[ThisURL]&LastAccessDate=[date]&NumHits=[math][lookup db=/MasterCounter/stmcounters.db&lookInField=URL&value=[ThisURL]&returnField=NumHits]+1[/math][/replace][/hideif]

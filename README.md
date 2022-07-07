@@ -1,18 +1,3 @@
-35sec crossfade, 10sec dissolve
+This repo is for the personal site of pianist, Madeleine Forte.
 
-15sec stable, 10sec dissolve
-
-3.5min target
-
-pink
-blue
-grape
-aque
-red
-plum
-fuschia
-
-pink
-blue
-plum
-fuschia
+Please visit madeleineforte.github.io to view it.

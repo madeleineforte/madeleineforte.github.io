@@ -170,6 +170,29 @@
     .photo-item img.bordered {
       border: solid;
     }
+
+    /* ── Floating back-to-top button ── */
+    #back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,215,0,0.15);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 1.25rem;
+      line-height: 34px;
+      text-align: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s;
+      user-select: none;
+      z-index: 999;
+    }
+
+    #back-to-top.visible { opacity: 1; }
   </style>
 </head>
 <body>
@@ -209,7 +232,7 @@
 
       <div class="entry">
         <span class="entry-date">May 5, 2026:</span>
-        The Lillibridge Ensemble has released a new album on Rom&eacute;o Records (7349): Madeleine Forte, J&aacute;nos K&eacute;ry, and Ildik&oacute; Bartha performing works by de Falla, Bengtson, Rachmaninov, Liszt, Brahms, and Dvo&#345;&aacute;k.
+        The Lillibridge Ensemble has released <em>International Piano Festival</em> on Rom&eacute;o Records, a live recording from October 3, 2025, featuring Madeleine Forte, J&aacute;nos K&eacute;ry, and Ildik&oacute; Bartha performing works by de Falla, Bengtson, Rachmaninov, Liszt, Brahms, and Dvo&#345;&aacute;k.
       </div>
       <div class="media-block">
         <a href="https://www.youtube.com/watch?v=1zUJGHCb8eI" target="_blank">
@@ -876,6 +899,22 @@
 
   </div><!-- #main -->
   </div><!-- #wrapper -->
+
+  <div id="back-to-top" title="Back to top">&#8679;</div>
+
+  <script>
+    var btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > window.innerHeight) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>

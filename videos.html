@@ -1,139 +1,262 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Other Madeleine Forte Videos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Madeleine Forte Videos</title>
+  <style>
+    :root {
+      --bg:       #201618;
+      --bg2:      #2a1e1a;
+      --bg3:      #342520;
+      --text:     #ffffff;
+      --gold:     #ffd700;
+      --gold-dim: #b89a00;
+      --tan:      #deb887;
+      --blue:     #1e90ff;
+      --border:   #4a3028;
+      --hover:    #3d2820;
+      --active:   #4a3020;
+      --font:     Arial, Helvetica, Geneva, Swiss, SunSans-Regular, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+    }
+
+    #page-heading {
+      padding: 12px 12px 10px 12px;
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    #layout {
+      display: flex;
+      align-items: flex-start;
+      height: 100vh;
+    }
+
+    #sidebar {
+      width: 320px;
+      flex-shrink: 0;
+      height: 100%;
+      border-right: 1px solid var(--border);
+      background: var(--bg2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    #sidebar-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    #sidebar-list::-webkit-scrollbar { width: 6px; }
+    #sidebar-list::-webkit-scrollbar-track { background: var(--bg2); }
+    #sidebar-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    #sidebar-footer {
+      padding: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--tan);
+      text-align: center;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    #sidebar-footer a { color: var(--gold); }
+    #sidebar-footer a:visited { color: #ff4500; }
+
+    .video-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .video-item:hover { background: var(--hover); }
+    .video-item.active { background: var(--active); border-left: 3px solid var(--gold); padding-left: 9px; }
+
+    .video-num {
+      color: var(--gold-dim);
+      font-size: 0.6875rem;
+      min-width: 18px;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .video-title {
+      font-size: 0.75rem;
+      line-height: 1.4;
+      color: var(--tan);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    .video-item.active .video-title { color: var(--text); -webkit-line-clamp: unset; }
+    .video-item:hover .video-title { color: var(--text); -webkit-line-clamp: unset; }
+
+    #player-area {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 24px;
+      overflow-y: auto;
+      background: var(--bg3);
+    }
+
+    #player-content {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #player-title {
+      color: var(--gold);
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      width: 100%;
+    }
+
+    #player-wrapper {
+      width: 100%;
+      border: 1px solid var(--border);
+    }
+
+    #player-wrapper iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      display: block;
+    }
+
+    #player-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--tan);
+      font-size: 0.875rem;
+    }
+
+  </style>
 </head>
-<!--<style>
-	.video-container iframe {
-		height: calc(50vw/1.77777778);
-		width: 50vw	;
-	}
-</style>-->
-<body bgcolor="black" link="#ffd700" text="white" alink="#ff4500" vlink="#1e90ff">
-<div align="center">
-<p><font color="#ffd700" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Other Madeleine Forte Videos</b></font></p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/8hWtezuaWHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/b9SSj2M28z0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Xs8w9ufUk74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/BtdDcuG_YZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/PTeS0oGZd7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/7VwyssVxuY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/kN8FqxMxaY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/3_vvuFMLwAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/nm7D6Zc4AUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/rP8Eo-sWlUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/1pBdhHXFp8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/nNnRHvqPJbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/zbCv0qz3DRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/d-FC86KPlW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/z46Vfurx8s4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/HXQFbRb-uAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>	
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/jDHXrCbJKEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>	
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/5hvGzG3VygM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>		
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/RnQqP_RyCYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>	
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/75wUqG6Dy9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/GLg4AlYSggA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/euaMdm5kHO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/9wbC9jua098" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/wpX6zpkNUUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OnbVNIugD34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/rpMM4fjZlb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/HIzm0Jcvw2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/TpyzahbIy8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WR5keY_5YSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/AB8Sj2vp4yY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Basr0ybzbRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lwr7T2kT0kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/QeUP_Cnl0ZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>
-  <center>There are several older videos that are only available to watch on YouTube.<br/><a href="https://www.youtube.com/playlist?list=PLtO3TPgASyIBMT4EicplqmUl16Syl1o6Y">Click here to view a longer playlist.</a></center>
-</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<body>
+
+<div id="layout">
+  <div id="sidebar">
+    <div id="page-heading">Other Madeleine Forte Videos</div>
+    <div id="sidebar-list"></div>
+    <div id="sidebar-footer">
+      There are several older videos only available on YouTube. <a href="https://www.youtube.com/playlist?list=PLtO3TPgASyIBMT4EicplqmUl16Syl1o6Y">Click here to view a longer playlist.</a>
+    </div>
+  </div>
+  <div id="player-area">
+    <div id="player-content">
+      <div id="player-title"></div>
+      <div id="player-placeholder">Select a video from the list</div>
+      <div id="player-wrapper" style="display:none;">
+        <iframe id="yt-player" src="" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+  const videos = [
+    { id: "KtSjORjDd6I", title: "James Greening-Valenzuela, violin, and Madeleine Forte, piano 1997 at Boise State University" },
+    { id: "8hWtezuaWHo", title: "International Music Festival \u2013 Day 4 \u2013 The Lillibridge Ensemble \u2013 Live at Evergreen Woods 2025/10/03" },
+    { id: "b9SSj2M28z0", title: "The Lillibridge Ensemble \u2013 Debussy Sonata for violin and piano" },
+    { id: "Xs8w9ufUk74", title: "Madeleine Forte & J\u00e1nos K\u00e9ry \u2013 Manuel de Falla, Spanish Dance No.\u00a01 from La vida breve" },
+    { id: "BtdDcuG_YZo", title: "Madeleine Forte \u2013 Chopin, Nocturne in F Major, Op.\u00a015, No.\u00a01" },
+    { id: "PTeS0oGZd7s", title: "Madeleine Forte \u2013 Matthew Bengtson, A la mani\u00e8re de Ravel" },
+    { id: "7VwyssVxuY0", title: "The Lillibridge Ensemble \u2013 Schumann Violin Sonata No\u00a01 in A minor" },
+    { id: "kN8FqxMxaY4", title: "Madeleine Hsu Forte, Recital at the Ferenc Liszt Conservatory, Debrecen, Hungary, 1996" },
+    { id: "3_vvuFMLwAE", title: "Liszt, Etude after Paganini #4 in E Major, with and without pedal, by Madeleine Forte" },
+    { id: "nm7D6Zc4AUY", title: "Liszt, Etude after Paganini #4 in E Major, by Madeleine Forte" },
+    { id: "rP8Eo-sWlUM", title: "The Lillibridge Ensemble \u2013 Madeleine Hsu Forte and Del Parkinson; Live at MCPA: 1986 & 1988" },
+    { id: "1pBdhHXFp8s", title: "The Lillibridge Ensemble \u2013 Brahms Sonata in D minor for Violin and Piano" },
+    { id: "nNnRHvqPJbc", title: "The Lillibridge Ensemble \u2014 Dvo\u0159\u00e1k Piano Quintet No.\u00a02 \u2014 Live at Evergreen Woods" },
+    { id: "zbCv0qz3DRg", title: "The Bel-\u00catre Duo \u2013 Rachmaninoff Cello Sonata in G minor Op.\u00a019 (excerpt) \u2013 May 5, 2019" },
+    { id: "d-FC86KPlW0", title: "Forte/Ryger \u2013 Brahms Violin Sonata no.\u00a03 in D minor \u2013 Nov 17, 2024" },
+    { id: "z46Vfurx8s4", title: "Forte/Ryger \u2013 Brahms Violin Sonata no.\u00a03 in D minor, op.\u00a0108, II. Adagio" },
+    { id: "HXQFbRb-uAk", title: "Madeleine Forte\u2019s 86th Birthday \u2013 Performance Excerpts Part II" },
+    { id: "jDHXrCbJKEU", title: "Madeleine Forte\u2019s 86th Birthday \u2013 Performance Excerpts Part I" },
+    { id: "5hvGzG3VygM", title: "The Lillibridge Ensemble \u2013 Live at Klavierhaus \u2013 April 7, 2024" },
+    { id: "RnQqP_RyCYc", title: "Chopin Nocturne in C Minor Opus 48 no.\u00a01 \u2014 Dec 31, 2023" },
+    { id: "75wUqG6Dy9E", title: "The Lillibridge Ensemble \u2013 Live at The Klavierhaus International Music Festival" },
+    { id: "GLg4AlYSggA", title: "Ravel, Gaspard de la nuit: Scarbo M.\u00a055, by Madeleine Forte, December 2022" },
+    { id: "euaMdm5kHO0", title: "Violin and Piano Recital" },
+    { id: "9wbC9jua098", title: "Live at Yale University" },
+    { id: "wpX6zpkNUUk", title: "A Second Try \u2014 February 18, 2022, by Madeleine Forte" },
+    { id: "OnbVNIugD34", title: "Chopin, \u00c9tude Opus 25 No.\u00a08 in D Major, by Madeleine Forte" },
+    { id: "rpMM4fjZlb4", title: "Madeleine Forte \u2013 Early Piano Recordings, Paris (1963\u201364)" },
+    { id: "HIzm0Jcvw2A", title: "Madeleine Forte \u2013 Santa Fe Festival Recital (2004)" },
+    { id: "TpyzahbIy8Q", title: "Madeleine Hsu Forte and Istv\u00e1n N\u00e1das - Duo Piano - 1980 (Remastered Audio)" },
+    { id: "WR5keY_5YSU", title: "Madeleine Hsu Forte and Del Parkinson - Duo Piano April 12, 1990" },
+    { id: "AB8Sj2vp4yY", title: "Franz Liszt\u2019s Settings of Petrarch Sonnets - Music Theory Lecture" },
+    { id: "Basr0ybzbRs", title: "Liszt-Sonetto del Petrarca 123" },
+    { id: "lwr7T2kT0kE", title: "Barber Piano Sonata: Movements 1 and 2" },
+    { id: "QeUP_Cnl0ZY", title: "Barber Piano Sonata: Movements 3 and 4" },
+  ];
+
+  const sidebar     = document.getElementById('sidebar-list');
+  const player      = document.getElementById('yt-player');
+  const titleEl     = document.getElementById('player-title');
+  const wrapper     = document.getElementById('player-wrapper');
+  const placeholder = document.getElementById('player-placeholder');
+  let current       = -1;
+
+  function loadVideo(index) {
+    if (current === index) return;
+    if (current >= 0) sidebar.children[current].classList.remove('active');
+    current = index;
+    const v = videos[index];
+    placeholder.style.display = 'none';
+    wrapper.style.display = 'block';
+    player.src = 'https://www.youtube.com/embed/' + v.id + '?autoplay=1';
+    titleEl.textContent = v.title;
+    sidebar.children[index].classList.add('active');
+    sidebar.children[index].scrollIntoView({ block: 'nearest' });
+  }
+
+  videos.forEach(function(v, i) {
+    const item = document.createElement('div');
+    item.className = 'video-item';
+    item.innerHTML = '<span class="video-num">' + (i + 1) + '</span><span class="video-title">' + v.title + '</span>';
+    item.addEventListener('click', function() { loadVideo(i); });
+    sidebar.appendChild(item);
+  });
+</script>
+
 </body>
 </html>

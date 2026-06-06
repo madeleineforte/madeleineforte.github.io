@@ -1,0 +1,59 @@
+/* ============================================================
+   text.css — layout for reviews, interviews, and articles
+   madeleineforte.github.io
+   ============================================================ */
+
+/* ── Reset ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Base ── */
+body {
+  background-color: #201618;
+  color: #ffffff;
+  font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+a         { color: #ffd700; }
+a:visited { color: #ff4500; }
+a:active  { color: #1e90ff; }
+
+/* ── Content wrapper ── */
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* ── Headings ── */
+h2.page-title {
+  color: #1e90ff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+  text-align: center;
+}
+
+p.subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #cccccc;
+  margin-bottom: 1.2em;
+}
+
+/* ── Body text ── */
+p {
+  margin-bottom: 0.9em;
+}
+
+p.body-text {
+  margin-bottom: 0.9em;
+}
+
+/* ── Images ── */
+img { max-width: 100%; }
+
+/* ── Misc ── */
+span.italic { font-style: italic; }
